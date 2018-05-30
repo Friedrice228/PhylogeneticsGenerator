@@ -32,17 +32,44 @@ public class PhyloTable{
     //I'm not really sure how I want to do this
     public void printTable(){
         
+        int counterRow = 1;
+        int counterCol = 0;
+        
         for (int i = 0; i < geneticData.length; i++){
             for (int j = 0; j < geneticData[0].length; j++){
-                if (j >= i){
+                //Prints the column indexes
+                if (i == 0){
                     if (j == geneticData[0].length - 1){
-                        System.out.println(geneticData[i][j]);
+                        System.out.println(counterCol);
                     } else{
-                        System.out.print(geneticData[i][j] + " ");
+                        if (counterCol == 0){
+                            System.out.print(counterCol + " ");
+                        } else{
+                            System.out.print(counterCol + "   ");
+                        }
                     }
-                }
-                else{
-                    System.out.print("    ");
+                    counterCol++;
+                    
+                //prints the row indexes
+                } else if (j == 0){
+                    if (j == geneticData[0].length - 1){
+                        System.out.println(counterRow);
+                    } else{
+                        System.out.print(counterRow + " ");
+                    }
+                    counterRow++;
+                    
+                } else{ //prints the actual fucking data
+                    if (j >= i){
+                        if (j == geneticData[0].length - 1){
+                            System.out.println(geneticData[i][j]);
+                        } else{
+                            System.out.print(geneticData[i][j] + " ");
+                        }
+                    }
+                    else{
+                        System.out.print("    ");
+                    }
                 }
             }
         }
