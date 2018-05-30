@@ -9,6 +9,7 @@ public class Sequencer{
     public String textData = "";
     public String[] sequences = {""};
     public int minI = 0;
+
     
     //constructor
     public Sequencer(String ident, String file) throws FileNotFoundException{

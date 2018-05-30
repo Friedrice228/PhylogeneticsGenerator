@@ -16,7 +16,10 @@ public class main {
         PhyloTable table = new PhyloTable(arr);
         table.print2dDataArray();
         
-        //yeet
+        System.out.println("");
+        
+        table.printTable();
+        
         
 	}
 }

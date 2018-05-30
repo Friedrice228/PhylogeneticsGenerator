@@ -28,4 +28,25 @@ public class PhyloTable{
         
     }
     
+    //print out the more relevant data compiled in the array. Leaves out the copied  difference numbers
+    //I'm not really sure how I want to do this
+    public void printTable(){
+        
+        for (int i = 0; i < geneticData.length; i++){
+            for (int j = 0; j < geneticData[0].length; j++){
+                if (j >= i){
+                    if (j == geneticData[0].length - 1){
+                        System.out.println(geneticData[i][j]);
+                    } else{
+                        System.out.print(geneticData[i][j] + " ");
+                    }
+                }
+                else{
+                    System.out.print("    ");
+                }
+            }
+        }
+        
+    }
+    
 }
