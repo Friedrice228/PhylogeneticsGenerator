@@ -29,7 +29,7 @@ public class PhyloTable{
     }
     
     //print out the more relevant data compiled in the array. Leaves out the copied  difference numbers
-    //I'm not really sure how I want to do this
+    //Printing indeces really should not be this complex
     public void printTable(){
         
         int counterRow = 1;
